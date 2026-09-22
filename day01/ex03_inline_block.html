@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>인라인요소와 블록요소</title>
+</head>
+
+<body>
+    일반 텍스트
+    줄바꿈 안 됨
+
+    <!-- h, p 등의 불록요소는 브라우저 크기를 모두 사용하는 
+     너비값을 가지므로, 강제로 줄 바꿈이 일어난다 -->
+    <p>단락을 정의하는 p태그</p>
+    <p>p태그는 약 16px 사이즈의 클자크기를 가진다</p>
+
+    <p>
+        <!-- b, strong, a 태그들은 태그 안에 요소만큼만 너비를 차지하므로
+         줄바꿈이 일어나지 않는 인라인요소 -->
+        p태그는 <b>단락</b>을 표시하는 용도의 태그로써
+        위 아래로 <strong>여백</strong>을 가지고 있다.
+    </p>
+
+    <p>
+        <!-- br : 강제개행 태그 -->
+        <i>첫번째</i> 줄<br/>
+        <em>두번째</em> 줄<br/>
+        세번째 줄<br/>
+        <a href="https://www.naver.com" target="_blank">네이버</a>
+
+        <br/>
+
+        <a href="ex01_first.html">html 시작</a>
+        <br/>
+        <a href="#">길동이가 만든 페이지로 전환</a>
+
+    </p>
+
+</body>
+
+</html>
