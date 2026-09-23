@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>자식 선택자</title>
+
+    <style>
+        #header > h1{ color:red; }
+        #header > div.nav{ color:blue; }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>헤더의 h1</h1>
+
+        <div>
+            <h1>메뉴1</h1>
+        </div>
+
+        <div class="nav">
+            <h1>메뉴2</h1>
+        </div>
+    </div>
+
+    <div class="nav">
+        <h1>메뉴3</h1>
+    </div>
+
+</body>
+
+</html>
