@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        *{margin:0; padding:0;}
+        .menu{overflow:hidden;}
+
+        .menu > li > a{
+            border:1px solid black;
+            width:50px;
+        }
+
+        .menu > li{
+            display:inline;
+        }
+
+        li{
+            list-style:none;
+            float:left;
+        }
+
+        .menu li a{
+            display:block;
+            padding:10px;
+            text-decoration:none;
+        }
+
+        .submenu li{
+            border:1px solid black;
+        }
+
+        .submenu{ display:none; }
+
+        .menu li:hover ul.submenu{
+            display:block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <ul class="menu">
+        <li>
+
+            <a href="#">메뉴</a>
+
+            <ul class="submenu">
+                <li><a href="#">짜장</a></li>
+                <li><a href="#">짬뽕</a></li>
+                <li><a href="#">탕수육</a></li>
+            </ul>
+
+        </li>
+    </ul>
+</body>
+
+</html>
