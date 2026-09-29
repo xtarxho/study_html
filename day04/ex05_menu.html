@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <style>
+        #menu{
+            background: #333;
+            overflow: hidden;
+        }
+
+        #menu > li{float: left;}
+
+        #menu a{
+            display: block;
+            padding: 10px;
+            color: #fff;
+        }
+
+        #menu > li > a:hover{
+            background: #555;
+        }
+
+        .submenu a:hover{
+            background: #aaf;
+        }
+
+        .submenu{
+            position: absolute;
+            background: #333;
+            display: none;
+        }
+
+        #menu li:hover .submenu{
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="menu">
+        <li>
+            <a href="#">주메뉴1</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴1-1</a></li>
+                <li><a href="#">하위메뉴1-2</a></li>
+                <li><a href="#">하위메뉴1-3</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">주메뉴2</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴2-1</a></li>
+                <li><a href="#">하위메뉴2-2</a></li>
+                <li><a href="#">하위메뉴2-3</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">주메뉴3</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴3-1</a></li>
+                <li><a href="#">하위메뉴3-2</a></li>
+                <li><a href="#">하위메뉴3-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

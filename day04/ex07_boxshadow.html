@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        p{
+            width: 150px;
+            padding: 30px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .a1{
+            /* box-shadow : x좌표 y좌표 번짐정도 색상 */
+            box-shadow: 10px 10px 10px #333;
+        }
+
+        .a2{
+            /* rgba(red, green, blue, 투명도(0=투명, 1=불투명)) */
+            box-shadow: 10px 10px 5px rgba(255,0,0,0.5);
+        }
+
+        .a3{
+            box-shadow: inset 5px -5px 10px 2px #333;
+        }
+
+        .a4{
+            box-shadow: inset -5px -5px 10px rgba(0,0,0, 0.5);
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class="a1">내용</p>
+
+    <p class="a2">내용</p>
+
+    <p class="a3">내용</p>
+
+    <p class="a4">내용</p>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <style>
+        #menu{
+            width: 1000px;
+            height: 45px;
+            padding: 6px 7px;
+            background: rgb(54, 53, 53);
+            margin: 0 auto;
+        }
+
+        #menu > li{
+            float: left;
+            position: relative;
+            margin: 3px 10px;
+            margin-left: 80px;
+        }
+
+        a{
+            display: block;
+            font-weight: bold;
+            padding: 10px 20px;
+            color: #e7e5e5;
+        }
+
+        li:hover a{
+            background: #fff;
+            color: #444;
+        }
+
+        #menu ul{
+            position: absolute;
+            left: 0;
+            top: 60px;
+            width: 150px;
+            border: 1px solid #b4b4b4;
+            display: none;
+        }
+
+        #menu li:hover ul{
+            display: block;
+        }
+
+        #menu ul a{
+            font-weight: normal;
+            color: #333;
+        }
+
+        #menu ul li:hover a{
+            background: #ccc;
+            color: #fff;
+            font-weight: bold;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <ul id="menu">
+        <li>
+            <a href="#">처음으로</a>
+        </li>
+
+        <li>
+            <a href="#">여행안내</a>
+            <ul>
+                <li><a href="#">소개합니다</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">이용방법</a>
+            <ul>
+                <li><a href="#">객실 둘러보기</a></li>
+                <li><a href="#">요금 안내</a></li>
+                <li><a href="#">예약하기</a></li>
+                <li><a href="#">예약 안내</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">게시판</a>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">Q/A</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">프로필</a>
+        </li>
+    </ul>
+</body>
+
+</html>

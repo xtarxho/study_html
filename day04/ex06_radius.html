@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        div{
+            width: 200px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background: #aaf;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .a1{
+            border-radius: 20px; /*네 귀퉁이 모두 라운딩 처리*/
+        }
+        .a2{
+            border-radius: 20px 30px; /*좌상우하, 우상좌하*/
+        }
+        .a3{
+            border-radius: 20px 30px 40px; /*좌상, 우상좌하, 우하*/
+        }
+        .a4{
+            border-radius: 20px 30px 40px 50px; /*좌상, 우상, 우하, 좌하*/
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="a1">내용</div>
+    <div class="a2">내용</div>
+    <div class="a3">내용</div>
+    <div class="a4">내용</div>
+</body>
+
+</html>

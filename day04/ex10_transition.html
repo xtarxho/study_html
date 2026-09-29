@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+
+            /* 애니메이션의 브라우저 별 호환을 위한 설정 */
+
+            /* -webkit- 사파리, 크롬 브라우저에서 호환 */
+            -webkit-transition-property: background, border-radius;
+            -webkit-transition-duration: 1s; /*1초동안 변경*/
+            -webkit-transition-delay: 2s;
+
+            /* -o- 오페라 브라우저 */
+            -o-transition-property: background, border-radius;
+            -o-transition-duration: 1s; /*1초동안 변경*/
+            -o-transition-delay: 2s;
+
+            /* -moz- 파이어폭스 */
+            -moz-transition-property: background, border-radius;
+            -moz-transition-duration: 1s; /*1초동안 변경*/
+            -moz-transition-delay: 2s; /*2초 후에 적용*/
+
+            /* -ms- 익스플로러 */
+        }
+
+        #box:hover {
+            background: blue;
+            border-radius: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>

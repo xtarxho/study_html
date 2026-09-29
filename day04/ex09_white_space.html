@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .normal{ 
+            white-space: normal;
+         }
+
+         .nowrap{
+            white-space: nowrap;
+         }
+
+         .pre{
+            white-space: pre;
+         }
+        /* ellipsis 속성은 단독으로 동작할 수 없고
+        white-space, overflow 속성과 함께 사용되어야 한다 */
+         .ellip{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+         }
+
+    </style>
+
+</head>
+
+<body>
+    <p class="normal">
+        공백문제 처리를 위해 white-space사용하기
+    </p>
+
+    <p class="nowrap">
+        자동줄바꿈이 허용되지 않았을 경우 white-space를 통해 
+        한줄에 출력할 수 있다. 만일 웹 브라우저의 크기를 넘어갈 만큼의 
+        너비라면 자동으로 스크롤바가 생성된다.
+    </p>
+
+    <p class="pre">
+        h1{ background:black; }
+
+        .normal     : 기본형태
+
+        .nowrap : 자동 스크롤바 생성
+    </p>
+
+    <pre>
+        for( int i = 0; i < 10; i++ ){
+            
+            System.out.println(i);
+
+        }
+    </pre>
+
+    <div class="ellip">
+        화면에 출력중인 문자열이 브라우저의 너비보다 길어질 경우 생략기호 표시하기
+    </div>
+
+</body>
+
+</html>
