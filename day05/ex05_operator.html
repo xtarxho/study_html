@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 연산자3</title>
+
+    <script>
+
+        let num = 10;
+        document.write(num++, '<br/>');
+        document.write(num, '<br/><hr/>');
+
+        // let gender = prompt("당신의 성별");
+        // document.write(gender + "<br/>");
+
+        //나이가 20이상 ~ 30미만이면서 여자인 경우만 합격 (true)
+        let gen = prompt("성별");
+        let age = prompt("나이");
+
+        // if( age >= 20 && age < 30 && gen == "여자"){
+        //     document.write("true")
+        // }
+        let result = age >= 20 && age < 30 && gen === "여자";
+        document.write(result + "<hr/>");
+
+        let n1 = 30;
+        let n2 = 50;
+        result = n1 <= n2 ? "작아요" : "커요";
+
+        let result2 = n1 <= n2 ? 100 : "커요";
+
+        document.write("결과 : " + result + "<br/>");
+        document.write("결과2 : " + result2);
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

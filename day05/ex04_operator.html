@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 연산자2</title>
+
+    <style>
+
+        span{
+            color: red;
+        }
+
+    </style>
+
+    <script>
+        let a = 10;
+        let b = 3;
+        let result = a > b;
+
+        document.write("a > b : " + result + "<br/>")
+        console.log("a > b : " + result)
+
+        result = a == b;
+        document.write( 'a == b : ', result, "<br/>" )
+
+        a += b;
+        document.write( "a : " + a + "<br/>" )
+
+        /*
+        과수원이 있다. 과수원에서 24시간동안 생산되는 과일의 갯수는
+        사과 5개, 오렌지 10개, 배 3개이다.
+        과수원에서 하루에 생산되는 과일의 총 갯수를 출력하고 
+        1시간에 몇개의 과일이 생산되는지 출력하시오.
+        */
+
+        let apple = 5;
+        let orange = 10;
+        let pear = 3;
+
+        let total = apple + orange + pear;
+        let avg = total / 24;
+        document.write("<span>하루생산량</span> : " + total + "개" + "<br/>")
+        document.write("시간당 생산수 : " + avg.toFixed(2) + "개")
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

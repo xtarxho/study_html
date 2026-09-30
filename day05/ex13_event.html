@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function send(){
+            alert("버튼 클림됨")
+        }
+        function send2(num){
+            alert(num)
+        }
+        function send3(res){
+            document.write(res)
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="버튼" onClick="send()"/>
+    <br/>
+    <input type="button" value="버튼2" onclick="send2(100)"/>
+    <br/>
+
+    <button onclick="send3('안녕')">버튼3</button>
+    
+</body>
+
+</html>

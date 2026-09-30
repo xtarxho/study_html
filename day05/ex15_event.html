@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function change(){
+            let str1 = document.getElementById("myinput1").value;
+            let str2 = document.getElementById("myinput2").value;
+
+            let res = document.getElementById("res");
+
+            res.innerHTML = '<p>' + str1 + str2 + '</p>'
+
+            res.style.background = '#aaf';
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="text" id="myinput1"/> <br/>
+    <input type="text" id="myinput2"/>
+    <input type="button" value="확인" onclick="change()"/>
+    <div id="res"></div>
+</body>
+
+</html>

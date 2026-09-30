@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>정규식(정규표현식)</title>
+
+    <script>
+        // 정규식 : 문자열에서 특정한 규칙이나 패턴을 찾아내기 위해 사용하는 형식의 언어
+
+        let number = prompt("정수");
+
+        let numPat = /^[0-9]+$/
+
+        if( numPat.test(number) ){
+            alert(number + "는 정수")
+        }else{
+            alert(number + "는 정수아님")
+        }
+
+        let phone = '010-1111-1111';
+        let phonePat = /^010-[0-9]{3,4}-[0-9]{4}$/
+
+        if( phonePat.test(phone) ){
+            alert(phone + "올바른 번호")
+        }else{
+            alert(phone + "올바르지 않은 번호")
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

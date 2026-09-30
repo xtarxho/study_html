@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function send(){
+            let iname = document.getElementById("myname").value;
+            // alert(iname.value);
+
+            let newinput = document.getElementById("res")
+            newinput.value = iname;
+
+        }
+
+        function send2(){
+
+            let myname = document.getElementById("myname").value;
+            let myp = document.getElementById("myp");
+            myp.innerHTML = myname;
+
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <input id="myname" value="홍길동" placeholder="이름"/>
+    <input type="button" value="확인" onclick="send()"/> <br/>
+
+    <input id="res"/> <br/>
+
+    <input type="button" value="확인2" onclick="send2()"/>
+
+    <p id="myp">여기로 값을 주세요</p>
+</body>
+
+</html>

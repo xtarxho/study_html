@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 연산자</title>
+
+    <script>
+
+        let a = 10;
+        let b = 3;
+        let result = a + b;
+        document.write('result : ' + result + '<br/>');
+        
+        result = a / b;
+        document.write('result : ' + result + '<br/>');
+        document.write('result : ' + result.toFixed(2) + '<br/>');
+
+        result = a % b;
+        document.write('result : ' + result + '<br/>');
+        
+        let num1 = 10;
+        let num2 = '10';
+
+        //== : 타입 구별없이 값이 같으면 true
+        //=== : 타입까지 구별해서 값이 같아야 true
+        result = num1 == num2;
+        document.write(result + '<br/>');
+        
+        result = num1 === num2;
+        document.write(result + '<br/>');
+        
+        result = num1 !== num2;
+        document.write(result + '<br/>');
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
