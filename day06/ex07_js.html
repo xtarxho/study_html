@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+
+        p{
+            margin-top: 40px;
+            font-size: 18px;
+        }
+
+        #num{
+            width: 80px;
+            height: 30px;
+            text-align: center;
+        }
+
+        input[type="button"]{
+            width: 60px;
+            height: 30px;
+            margin-left: 5px;
+        }
+
+        #log{
+            width: 300px;
+            min-height: 28px;
+            height: 20px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #f5f5f5;
+        }
+
+        #result{
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+
+        }
+
+    </style>
+
+    <script>
+        let rnd = Math.floor(Math.random() * 100) + 1;
+        console.log("발생한 난수 : " + rnd);
+
+        let log_txt = "";
+
+        function send(){
+            let input_num = document.getElementById("num")
+            let num = input_num.value.trim();
+            let log = document.getElementById("log")
+            let result = document.getElementById("result")
+
+            let numPat = /^[0-9]{1,3}$/
+
+            if( !numPat.test(num) || num > 100 || num < 1 ){
+                alert("최대 100의 정수를 입력하세요");
+                input_num.focus();
+                return;
+            }
+
+            //로그 표시
+            log_txt += num + " ";
+            log.innerHTML = log_txt;
+
+            //정답 판단
+            if( num > rnd ){
+                result.innerHTML = "DOWN!"
+            }else if( num < rnd ){
+                result.innerHTML = "UP!"
+            }else{
+                result.innerHTML = "정답!"
+            }
+
+            //입력상자의 내용을 비운다
+            input_num.value = "";
+            input_num.focus();
+        }
+    </script>
+
+</head>
+
+<body>
+    <p>
+        1 ~ 100 사이의 숫자 중 하나를 입력해서 정답을 맞혀보세요
+    </p>
+
+    <input id="num" size="5"/>
+    <input type="button" value="확인" onclick="send()"/>
+
+    <div id="log"></div>
+    
+    <div id="result"></div>
+
+</body>
+
+</html>
