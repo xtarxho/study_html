@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        #main_div{
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        //브라우저 시작과 함께 자동을 동작하는 메서드
+        window.onload = function(){
+            //새 div요소 생성
+            //<div></div>
+            let newDiv = document.createElement("div")
+
+            //<div>안녕</div>
+            newDiv.innerHTML = "안녕"
+
+            newDiv.style.background = "#aaf";
+
+            let main_div = document.getElementById("main_div")
+
+            //main_div에 새로만든 newDiv를 탑재
+            main_div.appendChild(newDiv)
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="main_div">
+        메인 DIV
+    </div>
+</body>
+
+</html>

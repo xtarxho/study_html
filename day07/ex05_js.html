@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function checkInput(){
+
+            console.log("여기")
+            let id = document.getElementById("txt1").value;
+            let txt_sub = document.getElementById("txt_sub")
+
+            if(id.trim() === ''){
+                txt_sub.innerHTML = "아이디는 한글자 이상 작성"
+            }else{
+                txt_sub.innerHTML = ""
+            }
+        }
+
+        function checkChange(){
+            alert("txt2의 값이 변경되고 focus가 옮겨졌습니다")
+        }
+
+        //select가 선택한 option이 바뀌면 호출
+        function changeSel(){
+            let my_sel = document.getElementById("my-sel")
+
+            if( my_sel.value !== '' ){
+                alert(my_sel.value)
+            }
+
+        }
+
+        function clearMenu(){
+            let sel = document.getElementById("my-sel")
+
+            //select태그가 가지고 있는 모든 option태그를 제거
+            sel.innerHTML = ''
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input id="txt1" oninput="checkInput()"/>
+
+    <input id="txt2" onchange="checkChange()"/>
+
+    <div id="txt_sub"></div>
+
+    <hr/>
+
+    <select id="my-sel" onchange="changeSel()">
+        <option value="">:::메뉴선택:::</option>
+        <option value="apple">사과</option>
+        <option value="banana">바나나</option>
+    </select>
+
+    <input type="button" value="메뉴 초기화" onclick="clearMenu()"/>
+
+</body>
+
+</html>

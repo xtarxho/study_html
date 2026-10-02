@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .container{
+            text-align: center;
+            width: 450px;
+            margin: 100px auto;
+            background: #f5f5f5;
+            padding: 30px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        input[type="text"]{
+            width: 70px;
+            padding: 8px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        select{
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        input[type="button"]{
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+
+        function calc(){
+            
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let op = document.getElementById("operator").value;
+            let res_p = document.getElementById("res_p");
+
+            let result;
+
+            //숫자판단 정규식 -> 직접 해야함
+            
+
+            //소수점 최대 2자리까지의 실수값을 판별하는 정규식
+            let floatPatt = /^(\d*)[\.]?(\d{1,2})?$/
+
+            switch(op){
+                case '+':
+                    result = Number(num1) + Number(num2);
+                    break;
+
+                case '-':
+                    result = num1 - num2;
+                    break;
+
+                case '*':
+                    result = num1 * num2;
+                    break;
+
+                case '/':
+                    if(num2 === '0'){
+                        alert("0으로는 나눌 수 없음")
+                        return;
+                    }
+                    result = num1 / num2;
+
+                    //연산결과의 소수점이 두자리를 넘어가면...
+                    if( !floatPatt.test(result) ){
+                        //결과값을 소수점 두자리까지 끊어서 다시 저장
+                        result = result.toFixed(2);
+                    }
+                    break;
+
+            }//switch
+
+            res_p.innerHTML = "결과 : " + result;
+
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>연산 실행</h2>
+
+        <input type="text" id="num1" placeholder="수1"/>
+        <select id="operator">
+
+            <option value="+">더하기(+)</option>
+            <option value="-">빼기(-)</option>
+            <option value="*">곱하기(*)</option>
+            <option value="/">나누기(/)</option>
+
+        </select>
+        <input type="text" id="num2" placeholder="수2"/>
+
+        <input type="button" onclick="calc()" value="실행"/>
+
+        <p id="res_p">결과 : </p>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        window.onload = function(){
+            let seDan = document.getElementById("selDan")
+
+            for( let i = 2; i <= 9; i++ ){
+
+                //<option></option>
+                let option = document.createElement("option")
+                
+                //<option>2단</option>
+                option.innerHTML = i + "단"
+                
+                //<option value='2'>2단</option>
+                option.value = i
+
+                selDan.appendChild(option)
+
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <select id="selDan"></select>
+</body>
+
+</html>

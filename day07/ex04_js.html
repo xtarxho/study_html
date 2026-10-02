@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/mylist.css" />
+
+    <script>
+        function add() {
+            let input = document.getElementById("todo");
+            let todoList = document.getElementById("todo-list");
+
+            if (input.value.trim() === '') {
+                alert("내용을 입력하시오");
+                input.focus();
+                return;
+            }
+
+            //li를 생성
+            //<li>내용</li>
+            let li = document.createElement('li');
+            li.innerHTML = input.value.trim();
+
+            //삭제버튼
+            let delBtn = document.createElement('input');
+            delBtn.type = 'button';
+            delBtn.value = '삭제'
+
+            //삭제버튼에 함수 연결
+            delBtn.onclick = function () {
+                del(li)
+            }
+
+            //추가버튼관련//
+            let subBtn = document.createElement("input");
+            subBtn.type = "button";
+            subBtn.value = "하위추가";
+
+
+            //하위추가 버튼에 감지자 등록
+            subBtn.onclick = function () {
+                subadd(li);
+            }
+
+            li.appendChild(subBtn);
+            /////////////
+
+            //삭제버튼을 li에 추가
+            li.appendChild(delBtn);
+
+            //ul에 li를 추가
+            todoList.appendChild(li);
+
+
+
+            input.value = '';
+            input.focus();
+
+        }// add
+
+        //삭제 버튼을 포함하고 있는 li를 통째로 삭제
+        function del(item) {
+            item.remove();
+        }
+
+        //하위추가 버튼 클릭 이벤트
+        function subadd(li) {
+
+            let subText = prompt("하위내용 입력")
+
+            if (subText.trim() === '') {
+                return;
+            }
+
+            //하위 ul -> li 생성
+            //<ul>
+            //    <li>프롬프트의 내용</li>
+            // </ul>
+            let subList = document.createElement('ul')
+            let subLi = document.createElement('li')
+            subLi.innerHTML = subText;
+
+            //하위 li에 삭제버튼 생성
+            let subDelBtn = document.createElement("button")
+            subDelBtn.innerHTML = "삭제"
+
+            //하위 li버튼(삭제)에 클릭이벤트 감지
+            subDelBtn.onclick = function(){
+                del(subLi)
+            }
+
+            subLi.appendChild(subDelBtn)
+            subList.appendChild(subLi)
+            li.appendChild(subList)
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>할 일 목록</h2>
+        <input type="text" id="todo" placeholder="할 일을 입력" />
+
+        <input type="button" id="addBtn" value="추가" onclick="add()" />
+
+        <ul id="todo-list"></ul>
+
+    </div>
+</body>
+
+</html>

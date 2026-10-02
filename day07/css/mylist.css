@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.container{
+    width: 400;
+    margin: 100px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#todo{
+    width: 230px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#addBtn{
+    padding: 8px 15px;
+    margin-left: 5px;
+    border: none;
+    background: #333;
+    color: #fff;
+}
+
+#todo-list{
+    margin-top: 25px;
+    padding: 0;
+}
+
+#todo-list li{
+    margin-bottom: 10px;
+    padding: 10px;
+    list-style: none;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+#todo-list input[type="button"]{
+    float: right;
+    background: #777;
+    color: #fff;
+    border-radius: 5px;
+}
