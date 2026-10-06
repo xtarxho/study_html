@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function check(){
+
+            let name = document.getElementById("name");
+            let age = document.getElementById("age");
+
+            //유효성 검사(무결성 체크)
+            if( name.value.trim() === '' ){
+                alert("이름을 입력하세요");
+                name.focus();
+                return;
+            }
+
+            let agePatt = /^[0-9]+$/
+            if( age.value.trim() === '' || !agePatt.test(age.value) ){
+                alert("나이를 입력하세요");
+                return;
+            }
+
+            alert('이름' + name.value + '\n나이 : ' + age.value);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <input id="name" placeholder="이름을 입력하시오"/> <br/>
+
+    <!-- <input type="number"/> -->
+
+    <input id="age" placeholder="나이를 입력하시오"/> <br/>
+    <input type="button" value="제출" onclick="check()"/>
+</body>
+
+</html>

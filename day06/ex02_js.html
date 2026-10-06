@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        a{text-decoration: none;}
+    </style>
+
+    <script>
+        
+        let num = 1;
+        let path = "image/img"
+
+        function next(){
+            num++;
+
+            if( num > 7 ){
+                num = 1;
+            }
+
+            let img = document.getElementById("gallery");
+            
+            img.src = path + num + ".jpg";
+
+        }
+
+        function prev(){
+            num--;
+            
+            if( num < 1 ){
+                num = 7;
+            }
+
+            let img = document.getElementById("gallery");
+
+            img.src = path + num + ".jpg";
+
+        }
+
+        //1초 간격으로 next()함수 불러오기
+        setInterval("next()", 1000)
+
+    </script>
+
+</head>
+
+<body>
+    <div id="galleryWrap">
+        <p>
+            <a href="#" onclick="prev()">
+                <img src="image/left_btn.png"/>
+            </a>
+
+            <img src="image/img1.jpg" id="gallery" width="300" height="200"/>
+
+            <a href="#" onclick="next()">
+                <img src="image/right_btn.png"/>
+            </a>
+        </p>
+    </div>
+</body>
+
+</html>

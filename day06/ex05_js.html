@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 30px auto;
+        }
+
+        th {
+            width: 60px;
+            background: #eee;
+        }
+
+        td {
+            padding-left: 5px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 5px;
+        }
+
+        input[type="button"]{
+            width: 40px;
+            height: 30px;
+        }
+
+        input[type="button"]:hover{
+            cursor: pointer;
+        }
+
+        input[type="text"]{
+            border-style: none;
+            outline: none;
+        }
+
+    </style>
+
+    <script>
+        function calc(op) {
+            let su1_input = document.getElementById("su1")
+            let su1 = su1_input.value;
+
+            let su2_input = document.getElementById("su2")
+            let su2 = su2_input.value;
+
+            let numPatt = /^[0-9]+$/
+
+            //무결성 체크
+            if (su1.trim() === '' || !numPatt.test(su1)) {
+                alert("수1에 값을 입력하시오")
+                su1_input.focus();
+                return;
+            }
+            if (su2.trim() === '' || !numPatt.test(su2)) {
+                alert("수2에 값을 입력하시오")
+                su2_input.focus();
+                return;
+            }
+
+            let res;
+
+            switch (op) {
+
+                case "+":
+                    res = Number(su1) + Number(su2);
+                    break;
+                case "-":
+                    res = Number(su1) - Number(su2);
+                    break;
+                case "*":
+                    res = Number(su1) * Number(su2);
+                    break;
+                case "/":
+                    // res = Number(su1) / Number(su2);
+                    res = (su2 == 0) ? 0 : (su1 / su2).toFixed(2);
+                    break;
+
+            }//switch
+
+            let result = document.getElementById("result")
+            result.value = res;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <table border="1">
+
+        <tr>
+            <th class="su">수1</th>
+            <td>
+                <input type="text" id="su1" />
+            </td>
+        </tr>
+
+        <tr>
+            <th class="su">수2</th>
+            <td>
+                <input type="text" id="su2" />
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <ul>
+                    <li><input type="button" value="+" onclick="calc('+')"  
+                        style="cursor: pointer;"/></li>
+                    <!-- 내가 가지고 있는 value값 -> input에 있는 값 -->
+                    <li><input type="button" value="-" onclick="calc(this.value)" /></li>
+                    <li><input type="button" value="*" onclick="calc(this.value)" /></li>
+                    <li><input type="button" value="/" onclick="calc(this.value)" /></li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <th class="res">결과</th>
+            <td>
+                <input type="text" id="result" readonly/>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

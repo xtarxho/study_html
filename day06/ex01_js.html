@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        #result{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    
+
+    <script>
+
+        function change(color){
+            let res = document.getElementById("result")
+            res.style.background = color;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <input type="button" value="빨강" onclick="change('red');"/>
+    <button onclick="change('blue')">파랑</button>
+    <input type="button" value="초록" onclick="change('green')"/>
+
+    <!-- 결과를 보여주기 위한 id 지정 -->
+    <div id="result"></div>
+</body>
+
+</html>
