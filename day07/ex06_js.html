@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function changeImg(){
+
+            let imgsel = document.getElementById("imgSelect").value;
+            let div = document.getElementById("div");
+
+            if( imgsel != '' ){
+                
+                //<img src=''></img>
+                let img = document.createElement("img");
+                img.src = "image/" + imgsel
+
+                div.innerHTML = '';
+                div.appendChild(img)
+
+            }else{
+                div.innerHTML = ''
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <select id="imgSelect" onchange="changeImg()">
+        <option value="">::이미지 선택::</option>
+        <option value="img6.jpg">알파카</option>
+        <option value="img3.jpg">거위</option>
+        <option value="img7.jpg">앵무</option>
+    </select>
+
+    <hr/>
+
+    <div id="div"></div>
+
+</body>
+
+</html>
