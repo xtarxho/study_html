@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function send(f){
+
+            let id = f.id.value;
+            let age = f.age.value;
+
+            if( age === '' ){
+                f.age.focus();
+                return;
+            }
+
+            f.action = "res.jsp"
+            f.submit();
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <input name="id"/> <br/>
+        <input name=""/> <br/>
+
+        <!-- this는 전송버튼을 의미
+             this.form은 나(button를 소유하고 있는 form태그를 의미) 
+             a, ul 등 아무태그나 this.form을 쓸 수 있는것은 아님!!
+             this.form 태그를 보낼 수 있는 애들은 input, textarea-->
+        <a href="#" onclick="check(this.form)">나도 버튼처럼</a>
+
+        <input type="button" value="전송" onclick="send(this.form)"/>
+    </form>
+</body>
+
+</html>
