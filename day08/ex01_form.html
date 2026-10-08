@@ -4,14 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+
+    <script>
+        function check(){
+            
+            let f = document.forms[0];
+
+            let id = f.id.value;
+            let pwd = f.pwd.value;
+
+            if( id === '' ){
+                alert("id를 입력하세요")
+                return;
+            }
+
+            if( pwd === '' ){
+                alert("비밀번호를 입력하세요")
+                return;
+            }
+
+            f.action = "abc.jsp"
+
+            //넘어가는게 다보임
+            f.method = "get"
+
+            // 넘어가는게 가려짐
+            f.method = "post"
+            f.submit();
+
+
+        }
+    </script>
+
 </head>
 
 <body>
     
+    <!-- forms의 0번으로 들어간다 -->
     <form>
         이름 : <input name="id" /> <br/>
         비밀번호 : <input type="password" name="pwd" /> <br/>
-        <input type="submit" value="전송"/>
+        <input type="button" value="전송" onclick="check()"/>
+    </form>
+
+    <!-- forms의 1번 -->
+    <form>
+
     </form>
 
 </body>

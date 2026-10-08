@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        function send(){
+
+            let f = document.getElementById("ff")
+
+            let name = f.name.value;
+            let age = f.age.value;
+
+            //유효성 체크
+            if( f.name.value === '' ){
+                alert("이름을 입력하세요")
+                return;
+            }
+
+            if( f.age.value === '' ){
+                alert("나이를 입력하세요")
+                return;
+            }
+
+            f.submit();
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form action="abc.jsp" method="get" id="ff">
+
+        이름 : <input name="name" /> <br />
+        나이 : <input name="age" /> <br />
+        <input type="button" value="전송" onclick="send()" />
+
+    </form>
+
+</body>
+
+</html>

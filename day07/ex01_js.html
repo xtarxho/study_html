@@ -50,7 +50,11 @@
             let result;
 
             //숫자판단 정규식 -> 직접 해야함
-            
+            let numPatt = /^\d+$/
+            if( !numPatt.test(num1) || !numPatt.test(num2) ){
+                alert("숫자만 입력하세요")
+                return;
+            }
 
             //소수점 최대 2자리까지의 실수값을 판별하는 정규식
             let floatPatt = /^(\d*)[\.]?(\d{1,2})?$/

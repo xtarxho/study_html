@@ -7,7 +7,7 @@
 
     <script>
         window.onload = function(){
-            let seDan = document.getElementById("selDan")
+            let selDan = document.getElementById("selDan")
 
             for( let i = 2; i <= 9; i++ ){
 
@@ -24,13 +24,37 @@
 
             }
 
+        }//onload
+
+        function send(){
+
+            let dan = document.getElementById("selDan").value;
+            let res = document.getElementById("res");
+
+            //구구단
+            let str = ''
+
+            for( let i = 1; i <= 9; i++ ){
+
+                str += dan + 'x' + i + '=' + dan*i + '<br/>'
+
+            }
+
+            res.innerHTML = str;
+
         }
+
     </script>
 
 </head>
 
 <body>
     <select id="selDan"></select>
+
+    <input type="button" value="확인" onclick="send()"/>
+
+    <div id="res"></div>
+
 </body>
 
 </html>

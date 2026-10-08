@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        function send(){
+
+            let f = document.ff;
+            
+            let id = f.id.value;
+            let pwd = f.pwd.value;
+
+            //유효성 체크
+            if( f.id.value === '' ){
+                alert("id를 입력하세요")
+            }
+
+            if( f.pwd.value === '' ){
+                alert("pwd를 입력하세요")
+            }
+
+            f.action = "abc.jsp"
+            f.method = "get"
+            f.submit();
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <form name="ff">
+        <input name="id"/> <br/>
+        <input type="password" name="pwd"/> <br/>
+        <input type="button" value="전송" onclick="send()"/>
+    </form>
+</body>
+
+</html>
